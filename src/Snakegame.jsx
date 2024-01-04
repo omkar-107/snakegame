@@ -116,9 +116,23 @@ const SnakeGame = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white">
-      <button onClick={startGame}>Start Game</button>
-      <button onClick={pauseGame}>Pause Game</button>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white bg-[url('../public/8-QHtTfr2FDOET3zT.png')] bg-no-repeat bg-center bg-cover">
+     
+     <div className="flex  items-center justify-center  bg-gray-800 text-white">
+      <button 
+        onClick={startGame} 
+        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2"
+      >
+        Start Game
+      </button>
+      <button 
+        onClick={pauseGame} 
+        className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded m-2"
+      >
+        Pause Game
+      </button>
+    
+    </div>
       <div id="score" className="text-4xl mb-4">Score: {score}</div>
       <div id="game-board" className="relative border-2 border-black bg-black w-[400px] h-[400px]">
         {snake.map((dot, index) => (
